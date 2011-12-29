@@ -25,16 +25,8 @@ about page breaks; if you are using the twoside mode, you can
 set the inner and outer margins to avoid the effects of the
 different margins.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -49,7 +41,6 @@ different margins.
 %doc %{_texmfdistdir}/doc/latex/fullwidth/fullwidth-test.tex
 %doc %{_texmfdistdir}/doc/latex/fullwidth/fullwidth.pdf
 %doc %{_texmfdistdir}/doc/latex/fullwidth/fullwidth.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -60,5 +51,3 @@ different margins.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
