@@ -6,7 +6,7 @@
 # catalog-version 0.1
 Name:		texlive-fullwidth
 Version:	0.1
-Release:	7
+Release:	8
 Summary:	Adjust margins of text block
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fullwidth
