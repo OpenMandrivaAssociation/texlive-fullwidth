@@ -1,18 +1,12 @@
-# revision 24684
-# category Package
-# catalog-ctan /macros/latex/contrib/fullwidth
-# catalog-date 2011-11-28 12:38:18 +0100
-# catalog-license lppl
-# catalog-version 0.1
 Name:		texlive-fullwidth
-Version:	0.1
-Release:	11
+Version:	24684
+Release:	1
 Summary:	Adjust margins of text block
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fullwidth
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fullwidth.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fullwidth.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fullwidth.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fullwidth.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ set the inner and outer margins to avoid the effects of the
 different margins.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -44,22 +38,10 @@ different margins.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1-2
-+ Revision: 752160
-- Rebuild to reduce used resources
-
-* Fri Dec 09 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.1-1
-+ Revision: 739618
-- texlive-fullwidth
-- texlive-fullwidth
-
