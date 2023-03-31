@@ -1,6 +1,6 @@
 Name:		texlive-fullwidth
 Version:	24684
-Release:	1
+Release:	2
 Summary:	Adjust margins of text block
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fullwidth
