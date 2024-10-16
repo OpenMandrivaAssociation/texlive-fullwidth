@@ -3,7 +3,7 @@ Version:	24684
 Release:	2
 Summary:	Adjust margins of text block
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fullwidth
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fullwidth
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fullwidth.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fullwidth.doc.r%{version}.tar.xz
